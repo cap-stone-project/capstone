@@ -24,5 +24,5 @@ We will be building an ELT data pipeline based on the [Netflix Top Shows](https:
 ![](url)
 
 ## ERD
-
+![](razr_erd.png)
 
