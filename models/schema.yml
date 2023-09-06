@@ -1,0 +1,28 @@
+version: 2
+
+sources:
+  - name: netflix_data
+    database: fivetran_database
+    schema: netflix_data
+    tables:
+      - name: top_10
+        description: >
+          Netflix's daily top ten list
+      - name: tv_shows
+        description: >
+          All top tv shows
+      - name: movies
+        description: >
+          All top movies
+      - name: tv_shows_by_year
+        description: >
+          Top tv shows by year
+      - name: movies_by_year
+        description: >
+          Top movies by year
+      - name: raw_credits
+        description: >
+          All credited actors and directors for top movies and tv shows
+      - name: raw_titles
+        description: >
+          Additional info on top movies and tv shows
