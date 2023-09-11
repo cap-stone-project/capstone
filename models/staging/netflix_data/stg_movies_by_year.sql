@@ -8,11 +8,12 @@ source as (
 
 movies_by_year as (
 
-    select score,
-    main_genre,
-    title,
-    release_year,
-    main_production
+    select 
+        score,
+        main_genre,
+        title,
+        release_year,
+        main_production
 
     from source
 

@@ -8,11 +8,12 @@ source as (
 
 raw_credits as (
 
-    select character,
-    role,
-    name,
-    id,
-    person_id
+    select 
+        character,
+        role,
+        name,
+        id,
+        person_id
 
     from source
 

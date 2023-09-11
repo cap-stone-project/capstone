@@ -8,14 +8,15 @@ source as (
 
 tv_shows as (
 
-    select score,
-    number_of_votes,
-    main_genre,
-    title,
-    release_year,
-    duration,
-    main_production,
-    number_of_seasons
+    select 
+        score,
+        number_of_votes,
+        main_genre,
+        title,
+        release_year,
+        duration,
+        main_production,
+        number_of_seasons
 
     from source
 

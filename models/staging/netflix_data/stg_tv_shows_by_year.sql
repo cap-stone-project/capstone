@@ -8,12 +8,13 @@ source as (
 
 tv_shows_by_year as (
 
-    select score,
-    main_genre,
-    title,
-    release_year,
-    main_production,
-    number_of_seasons
+    select 
+        score,
+        main_genre,
+        title,
+        release_year,
+        main_production,
+        number_of_seasons
 
     from source
 

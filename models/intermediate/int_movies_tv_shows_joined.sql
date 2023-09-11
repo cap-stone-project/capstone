@@ -14,16 +14,34 @@ top_10 AS (
 
 raw_credits  AS (
     SELECT * FROM {{ ref ('stg_raw_credits')}}
-),
+)
 
 
+SELECT
+    SCORE,
+    NUMBER_OF_VOTES,
+    MAIN_GENRE,
+    TITLE,
+    RELEASE_YEAR,
+    MAIN_PRODUCTION,
+    NULL AS NUMBER_OF_SEASONS,
+    DURATION AS MOVIE_DURATION,
+    NULL AS TV_SHOW_DURATION
+FROM movies
 
-SELECT * FROM tv_shows
-JOIN movies ON tv_shows.score = movies.score
+UNION ALL
 
-SELECT * FROM tv_shows
-JOIN movies ON tv_shows.main_genre = movies.main_genre
+SELECT
+    SCORE,
+    NUMBER_OF_VOTES,
+    MAIN_GENRE,
+    TITLE,
+    RELEASE_YEAR,
+    MAIN_PRODUCTION,
+    NUMBER_OF_SEASONS,
+    NULL AS MOVIE_DURATION,
+    DURATION AS TV_SHOW_DURATION
+FROM tv_shows
+ORDER BY score DESC
 
 
-SELECT * FROM top_10
-JOIN movies ON top_10.title = movies.title
