@@ -29,8 +29,6 @@ sources:
           - name: title
             description: Name of movie
 
-      
-
       - name: raw_credits
         description: Raw credit data.
         columns:
@@ -38,7 +36,7 @@ sources:
             description: Primary key for raw_credits.
             tests:
               - unique
-              - not_null   
+              - not_null
 
       - name: top_10
         description: Raw top_10 data.
@@ -64,9 +62,9 @@ sources:
             description: Name of movie or series
           - name: type
             description: Checks if it's a movie or TV show
-            tests: 
+            tests:
               - accepted_values:
-                  values: 
+                  values:
                     - "Movie"
                     - "TV Show"
           - name: viewership_score
@@ -98,4 +96,3 @@ sources:
             description: Rating out of 10
           - name: title
             description: Name of series
-
