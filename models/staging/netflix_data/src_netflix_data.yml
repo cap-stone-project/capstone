@@ -29,24 +29,7 @@ sources:
           - name: title
             description: Name of movie
 
-      - name: movies_by_year
-        description: Raw movies_by_year data.
-        columns:
-          - name: id
-            description: Primary key for movies_by_year.
-            tests:
-              - unique
-              - not_null
-          - name: main_genre
-            description: Genre of movie
-          - name: main_production
-            description: Country where the movie was produced
-          - name: release_year
-            description: Year in which the movie was released
-          - name: score
-            description: Rating out of 10
-          - name: title
-            description: Name of movie
+      
 
       - name: raw_credits
         description: Raw credit data.
@@ -55,16 +38,7 @@ sources:
             description: Primary key for raw_credits.
             tests:
               - unique
-              - not_null
-
-      - name: raw_titles
-        description: Raw title data.
-        columns:
-          - name: id
-            description: Primary key for raw_titles.
-            tests:
-              - unique
-              - not_null
+              - not_null   
 
       - name: top_10
         description: Raw top_10 data.
@@ -125,23 +99,3 @@ sources:
           - name: title
             description: Name of series
 
-      - name: tv_shows_by_year
-        description: Raw tv_shows_by_year data.
-        columns:
-          - name: id
-            description: Primary key for tv_shows_by_year.
-            tests:
-              - unique
-              - not_null
-          - name: main_genre
-            description: Genre of series
-          - name: main_production
-            description: Country where the series was produced
-          - name: number_of_seasons
-            description: Total number of seasons
-          - name: release_year
-            description: Year in which the series was released
-          - name: score
-            description: Rating out of 10
-          - name: title
-            description: Name of series
