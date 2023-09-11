@@ -6,12 +6,18 @@ source as (
 
 ),
 
-renamed as (
+movies as (
 
-    select *
+    select score,
+    number_of_votes,
+    main_genre,
+    title,
+    release_year,
+    duration,
+    main_production
 
     from source
 
 )
 
-select * from renamed
+select * from movies

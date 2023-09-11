@@ -6,12 +6,16 @@ source as (
 
 ),
 
-renamed as (
+raw_credits as (
 
-    select *
+    select character,
+    role,
+    name,
+    id,
+    person_id
 
     from source
 
 )
 
-select * from renamed
+select * from raw_credits
