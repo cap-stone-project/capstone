@@ -1,5 +1,5 @@
 version: 2
-​
+
 sources:
   - name: netflix_data
     description: A clone of a Postgres application database.
@@ -28,7 +28,7 @@ sources:
             description: Rating out of 10
           - name: title
             description: Name of movie
-​
+
       - name: movies_by_year
         description: Raw movies_by_year data.
         columns:
