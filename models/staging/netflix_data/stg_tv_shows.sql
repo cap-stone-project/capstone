@@ -6,12 +6,19 @@ source as (
 
 ),
 
-renamed as (
+tv_shows as (
 
-    select *
+    select score,
+    number_of_votes,
+    main_genre,
+    title,
+    release_year,
+    duration,
+    main_production,
+    number_of_seasons
 
     from source
 
 )
 
-select * from renamed
+select * from tv_shows

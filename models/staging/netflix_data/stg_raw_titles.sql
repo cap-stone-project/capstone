@@ -6,12 +6,23 @@ source as (
 
 ),
 
-renamed as (
+raw_titles as (
 
-    select *
+    select seasons,
+    imdb_id,
+    imdb_votes,
+    release_year,
+    runtime,
+    title,
+    type,
+    imdb_score,
+    genres,
+    production_countries,
+    id,
+    age_certification
 
     from source
 
 )
 
-select * from renamed
+select * from raw_titles
