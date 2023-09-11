@@ -1,0 +1,142 @@
+version: 2
+​
+sources:
+  - name: netflix_data
+    description: A clone of a Postgres application database.
+    database: pc_fivetran_db
+    schema: netflix_data
+    tables:
+      - name: movies
+        description: Raw movie data.
+        columns:
+          - name: id
+            description: Primary key for movie.
+            tests:
+              - unique
+              - not_null
+          - name: duration
+            description: Length of movie
+          - name: main_genre
+            description: Genre of movie
+          - name: main_production
+            description: Country where the movie was produced
+          - name: number_of_votes
+            description: Total number of votes on IMDb
+          - name: release_year
+            description: Year in which the movie was released
+          - name: score
+            description: Rating out of 10
+          - name: title
+            description: Name of movie
+​
+      - name: movies_by_year
+        description: Raw movies_by_year data.
+        columns:
+          - name: id
+            description: Primary key for movies_by_year.
+            tests:
+              - unique
+              - not_null
+          - name: main_genre
+            description: Genre of movie
+          - name: main_production
+            description: Country where the movie was produced
+          - name: release_year
+            description: Year in which the movie was released
+          - name: score
+            description: Rating out of 10
+          - name: title
+            description: Name of movie
+
+      - name: raw_credits
+        description: Raw credit data.
+        columns:
+          - name: id
+            description: Primary key for raw_credits.
+            tests:
+              - unique
+              - not_null
+
+      - name: raw_titles
+        description: Raw title data.
+        columns:
+          - name: id
+            description: Primary key for raw_titles.
+            tests:
+              - unique
+              - not_null
+
+      - name: top_10
+        description: Raw top_10 data.
+        columns:
+          - name: id
+            description: Primary key for top_10.
+            tests:
+              - unique
+              - not_null
+          - name: as_of
+            description: 
+          - name: days_in_top_10
+            description: 
+          - name: last_week_rank
+            description: 
+          - name: netflix_exclusive
+            description: 
+          - name: netflix_release_date
+            description: 
+          - name: rank
+            description: 
+          - name: title
+            description: 
+          - name: type
+            description: 
+          - name: viewership_score
+            description: 
+          - name: year_to_date_rank
+            description: 
+
+      - name: tv_shows
+        description: Raw TV show data.
+        columns:
+          - name: id
+            description: Primary key for tv_shows.
+            tests:
+              - unique
+              - not_null
+          - name: duration
+            description: Length of movie
+          - name: main_genre
+            description: Genre of movie
+          - name: main_production
+            description: Country where the movie was produced
+          - name: number_of_seasons
+            description: Total number of seasons
+          - name: number_of_votes
+            description: Total number of votes on IMDb
+          - name: release_year
+            description: Year in which the movie was released
+          - name: score
+            description: Rating out of 10
+          - name: title
+            description: Name of movie
+
+      - name: tv_shows_by_year
+        description: Raw tv_shows_by_year data.
+        columns:
+          - name: id
+            description: Primary key for tv_shows_by_year.
+            tests:
+              - unique
+              - not_null
+          - name: main_genre
+            description: Genre of movie
+          - name: main_production
+            description: Country where the movie was produced
+          - name: number_of_seasons
+            description: Total number of seasons
+          - name: release_year
+            description: Year in which the movie was released
+          - name: score
+            description: Rating out of 10
+          - name: title
+            description: Name of movie
