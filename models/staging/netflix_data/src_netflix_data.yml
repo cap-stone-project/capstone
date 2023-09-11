@@ -75,25 +75,30 @@ sources:
               - unique
               - not_null
           - name: as_of
-            description: 
+            description: Shows as of what date the movie or series was in the top 10
           - name: days_in_top_10
-            description: 
+            description: Total number of days spent in the top 10
           - name: last_week_rank
-            description: 
+            description: The movie's or series' rank from last week
           - name: netflix_exclusive
-            description: 
+            description: If the movie or series is exclusive to Netflix
           - name: netflix_release_date
-            description: 
+            description: When the movie or series became available on Netflix
           - name: rank
-            description: 
+            description: Ranking 1-10 in the top 10 list
           - name: title
-            description: 
+            description: Name of movie or series
           - name: type
-            description: 
+            description: Checks if it's a movie or TV show
+            test: 
+              - accepted_values:
+                  values: 
+                    - "Movie"
+                    - "TV Show"
           - name: viewership_score
-            description: 
+            description: How frequently a movie or show has been watched
           - name: year_to_date_rank
-            description: 
+            description: The ranking of the movie or series from year to date
 
       - name: tv_shows
         description: Raw TV show data.
@@ -104,21 +109,21 @@ sources:
               - unique
               - not_null
           - name: duration
-            description: Length of movie
+            description: Length of each episode in the series
           - name: main_genre
-            description: Genre of movie
+            description: Genre of series
           - name: main_production
-            description: Country where the movie was produced
+            description: Country where the series was produced
           - name: number_of_seasons
             description: Total number of seasons
           - name: number_of_votes
             description: Total number of votes on IMDb
           - name: release_year
-            description: Year in which the movie was released
+            description: Year in which the series was released
           - name: score
             description: Rating out of 10
           - name: title
-            description: Name of movie
+            description: Name of series
 
       - name: tv_shows_by_year
         description: Raw tv_shows_by_year data.
@@ -129,14 +134,14 @@ sources:
               - unique
               - not_null
           - name: main_genre
-            description: Genre of movie
+            description: Genre of series
           - name: main_production
-            description: Country where the movie was produced
+            description: Country where the series was produced
           - name: number_of_seasons
             description: Total number of seasons
           - name: release_year
-            description: Year in which the movie was released
+            description: Year in which the series was released
           - name: score
             description: Rating out of 10
           - name: title
-            description: Name of movie
+            description: Name of series
