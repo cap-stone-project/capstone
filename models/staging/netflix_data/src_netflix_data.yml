@@ -90,7 +90,7 @@ sources:
             description: Name of movie or series
           - name: type
             description: Checks if it's a movie or TV show
-            test: 
+            tests: 
               - accepted_values:
                   values: 
                     - "Movie"

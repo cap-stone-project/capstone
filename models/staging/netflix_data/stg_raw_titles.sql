@@ -8,18 +8,19 @@ source as (
 
 raw_titles as (
 
-    select seasons,
-    imdb_id,
-    imdb_votes,
-    release_year,
-    runtime,
-    title,
-    type,
-    imdb_score,
-    genres,
-    production_countries,
-    id,
-    age_certification
+    select 
+        seasons,
+        imdb_id,
+        imdb_votes,
+        release_year,
+        runtime,
+        title,
+        type,
+        imdb_score,
+        genres,
+        production_countries,
+        id,
+        age_certification
 
     from source
 

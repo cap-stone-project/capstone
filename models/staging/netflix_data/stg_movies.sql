@@ -8,13 +8,14 @@ source as (
 
 movies as (
 
-    select score,
-    number_of_votes,
-    main_genre,
-    title,
-    release_year,
-    duration,
-    main_production
+    select 
+        score,
+        number_of_votes,
+        main_genre,
+        title,
+        release_year,
+        duration,
+        main_production
 
     from source
 
